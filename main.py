@@ -44,8 +44,13 @@ def main():
     print(f"*** Report for {book_path} ***")
     print(f"Book contains {num_words} words")
     for c in sorted_char_list:
-        print(f"The letter {c["char"]} occurs {c["count"]} times")
+        print(f"The letter '{c["char"]}' occurs {c["count"]} times")
+    first = sorted_char_list[0]
+    last = sorted_char_list[-1]
+    diff = first["count"] - last["count"]
+    print(f"The most common letter '{first["char"]}' occurs {diff} more times than the least common letter '{last["char"]}'")
+    #do other stuff 
     
-        
+     
 if __name__ == "__main__":
     main()
